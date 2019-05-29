@@ -27,5 +27,3 @@ namespace Quartz.Extensions.Hosting
         }
     }
 }
-
-
