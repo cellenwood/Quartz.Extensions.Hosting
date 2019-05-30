@@ -13,9 +13,10 @@ namespace Quartz.Extensions.Hosting
             _scheduler = scheduler;
         }
 
-        public async Task StartAsync(CancellationToken cancellationToken)
+        public Task StartAsync(CancellationToken cancellationToken)
         {
             _scheduler.Start(cancellationToken).Wait();
+            return Task.CompletedTask;
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
