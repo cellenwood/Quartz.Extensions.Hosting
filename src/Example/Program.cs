@@ -25,17 +25,16 @@ namespace Example
 
                     services.AddQuartz(quartz =>
                     {
-                        quartz.AddJob(
+                        quartz.ScheduleJob(
+                            JobBuilder
+                                .Create(typeof(HelloJob))
+                                .Build(),
                             TriggerBuilder
                                 .Create()
                                 .WithSimpleSchedule(s => s
                                     .WithIntervalInSeconds(5)
                                     .RepeatForever())
-                                .Build(),
-                            JobBuilder
-                                .Create(typeof(HelloJob))
-                                .Build()
-                        );
+                                .Build());
                     });
                 })
                 .RunAsTopshelfService(host =>
