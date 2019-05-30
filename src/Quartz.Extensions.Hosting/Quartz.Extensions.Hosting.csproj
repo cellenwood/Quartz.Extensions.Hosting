@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+	<Authors>Chris Ellenwood</Authors>
+    <Version>1.0.0</Version>
+    <Description>Runs Quartz.net as a HostedService in a generic host.</Description>
+    <PackageProjectUrl>https://github.com/cellenwood/Quartz.Extensions.Hosting</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags>Quartz Generic-host hosting</PackageTags>
+    <PackageLicenseUrl>https://github.com/cellenwood/Quartz.Extensions.Hosting/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <PackageReleaseNotes>Targets netstandard2.2</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
